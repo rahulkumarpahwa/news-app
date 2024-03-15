@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Footer extends Component {
   constructor() {
@@ -8,16 +9,29 @@ class Footer extends Component {
   render() {
     return (
       <div className="p-4 flex justify-center flex-col items-center shadow-lg  bg-slate-300">
-        <div className=" flex items-center justify-center shadow text-white bg-slate-400 rounded-lg">
+        <Link
+          to="/"
+          className=" flex items-center justify-center shadow text-white bg-slate-400 rounded-lg"
+        >
           <h1 className="text-6xl">10T</h1>{" "}
           <span className="text-xs text-stone-500 font-bold rotate-90">
             News
           </span>
-        </div>
+        </Link>
 
         <div className="mt-4">
-          <span className="m-5 font-bold cursor-pointer">Home</span>
-          <span className="m-5 font-bold cursor-pointer">About</span>
+          <Link
+            to="/"
+            className="m-5 font-bold cursor-pointer hover:text-stone-500"
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className="m-5 font-bold cursor-pointer hover:text-stone-500"
+          >
+            About
+          </Link>
         </div>
         <div className="font-bold mt-2">
           &copy; TenTech News 2024-2025

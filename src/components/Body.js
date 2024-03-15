@@ -1,7 +1,6 @@
 import { Component } from "react";
 import NewsCard from "./NewsCard";
 import Shimmer from "./Shimmer";
-import OnlineStatus from "../../utils/OnlineStatus";
 
 class Body extends Component {
   constructor() {
@@ -36,8 +35,8 @@ class Body extends Component {
       <Shimmer />
     ) : (
       <div className="mt-8 flex flex-col justify-center items-center">
-        <h2 className="text-center text-stone-500 font-black bg-slate-400 w-[120px] rounded-lg">
-          Tech News 📰
+        <h2 className="text-center text-stone-500 font-black bg-slate-400 w-[220px] rounded-lg">
+          Today's 10 Tech News 📰
         </h2>
         <div className="flex flex-wrap justify-center">
           {console.log(cardData)}
