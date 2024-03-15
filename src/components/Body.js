@@ -1,6 +1,7 @@
 import { Component } from "react";
 import NewsCard from "./NewsCard";
 import Shimmer from "./Shimmer";
+import OnlineStatus from "../../utils/OnlineStatus";
 
 class Body extends Component {
   constructor() {
@@ -12,15 +13,19 @@ class Body extends Component {
   }
 
   async componentDidMount() {
+    try {
+      const data = await fetch(
+        "https://newsdata.io/api/1/news?apikey=pub_396338e257e5e07e25a943fa428b8bb1b89d4&country=us&category=technology,science&image=1"
+      );
+      const json = await data.json();
+      // console.log(json);
+      this.setState({
+        cardData: json.results,
+      });
+    } catch (error) {
+      console.log("Error");
+    }
     // console.log("component did mount");
-    const data = await fetch(
-      "https://newsdata.io/api/1/news?apikey=pub_396338e257e5e07e25a943fa428b8bb1b89d4&country=us&category=technology,science&image=1"
-    );
-    const json = await data.json();
-    // console.log(json);
-    this.setState({
-      cardData: json.results,
-    });
   }
 
   render() {
@@ -30,9 +35,12 @@ class Body extends Component {
     return cardData === null ? (
       <Shimmer />
     ) : (
-      <div className="mt-8">
-        <h2 className="text-center">Tech News</h2>
+      <div className="mt-8 flex flex-col justify-center items-center">
+        <h2 className="text-center text-stone-500 font-black bg-slate-400 w-[120px] rounded-lg">
+          Tech News 📰
+        </h2>
         <div className="flex flex-wrap justify-center">
+          {console.log(cardData)}
           {cardData.map((card) => (
             <NewsCard data={card} key={card.article_id} />
           ))}
