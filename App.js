@@ -9,9 +9,9 @@ import Error from "./src/components/Error";
 
 const App = () => {
   return (
-    <div className="app">
+    <div className="app h-screen w-screen dark:bg-black">
       <Header />
-      <Outlet />
+      <Outlet className="dark:bg-black" />
       <Footer />
     </div>
   );

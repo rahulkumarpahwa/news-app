@@ -3,12 +3,12 @@ import { Component } from "react";
 class NewsCard extends Component {
   constructor(props) {
     super(props);
-    console.log(props.data);
+    // console.log(props.data);
   }
   render() {
     const { title, link, description, image_url } = this.props.data;
     return (
-      <div className="m-4 p-4 bg-slate-100 w-[300px] h-[400px] rounded-xl">
+      <div className="m-4 p-4 bg-slate-100 w-[300px] h-[400px] rounded-xl dark:bg-slate-600 dark:text-white">
         <div className="flex justify-center">
           <img
             className="h-[150px] w-[280px] rounded-2xl items-centre"
@@ -21,9 +21,9 @@ class NewsCard extends Component {
         <a
           href={link}
           target="_blank"
-          className="p-1 my-4 rounded-lg bg-slate-400 "
+          className="p-2 my-4 rounded-lg bg-slate-400 font-semibold hover:text-white hover:border-4 border-black "
         >
-          Check Article
+          Check Full Article
         </a>
       </div>
     );

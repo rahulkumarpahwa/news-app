@@ -8,7 +8,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <div className="p-4 flex justify-center flex-col items-center shadow-lg  bg-slate-300">
+      <div className="p-4 flex justify-center flex-col items-center shadow-lg  bg-slate-300 dark:bg-slate-600 dark:text-white">
         <Link
           to="/"
           className=" flex items-center justify-center shadow text-white bg-slate-400 rounded-lg"
