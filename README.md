@@ -5,11 +5,11 @@
 # Features :
 This App has following features :
 - You can search any keyword from news.
-- You can set the dark mode of the page.</li>
+- You can set the dark mode of the page.
 - You can also see the online status of the page at the top right corner.
 - You can click on "Check Full Article" to know more about the news.
 - You can see the ShimmerUI when you open the page.
-- You can go to About page to know more about the app.</li>
+- You can go to About page to know more about the app.
 
 # Tech Stack :
 Technologies used are:
