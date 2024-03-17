@@ -22,12 +22,6 @@ class Header extends Component {
           </span>
         </Link>
 
-        {/* <div className=" flex justify-centre ml-9">
-          <h2 className="text-center text-white font-black bg-slate-400 w-[100px] rounded-lg">
-            10 Tech News 📰
-          </h2>
-        </div> */}
-
         <div>
           <ul className="flex">
             <Link
@@ -47,8 +41,7 @@ class Header extends Component {
             </li>
 
             <button
-              id="darkbtn"
-              className="bg-slate-500 p-1 rounded-2xl flex items-center mx-4 dark:bg-white"
+              className="bg-slate-500 mt-0 p-1 rounded-2xl flex items-center mx-4 dark:bg-white"
               onClick={() => {
                 document.documentElement.classList.toggle("dark");
                 const sun = document.querySelector("#sun");

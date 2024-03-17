@@ -7,6 +7,7 @@ import About from "./src/components/About";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Error from "./src/components/Error";
 
+
 const App = () => {
   return (
     <div className="app h-screen w-screen dark:bg-black">

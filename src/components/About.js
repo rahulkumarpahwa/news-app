@@ -22,13 +22,14 @@ class About extends Component {
 
           <h2 className="my-3 font-bold">This App has following features :</h2>
           <ul className="list-disc ">
-            <li>You can search any keyword from news description.</li>
-            <li>You can click on "Know More" to know more about the .</li>
-            <li>You can see the ShimmerUI when you open the page.</li>
+            <li>You can search any keyword from news.</li>
+            <li>You can set the dark mode of the page.</li>
+            <li>You can also see the online status of the page at the top right corner.</li>
             <li>
-              You can go to About page and also to the original article of the
-              page.
+              You can click on "Check Full Article" to know more about the news.
             </li>
+            <li>You can see the ShimmerUI when you open the page.</li>
+            <li>You can go to About page to know more about the app.</li>
           </ul>
           <h2 className="my-3 font-bold">Technologies used :</h2>
           <ul className="list-disc">
